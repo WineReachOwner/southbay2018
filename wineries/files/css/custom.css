@@ -1,0 +1,126 @@
+.bookmarks{float: right;
+	background-image: url('../img/wine-off-sm-orig.gif');
+	background-repeat: no-repeat;
+	width: 43px;
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	right:-20px;
+	cursor: pointer;
+
+
+}
+.bookmarks:active,.bookmarks:focus,.bookmarks:focus:hover{border:none !important;outline:0;}
+.bookmarks.active,.bookmarks.active:focus:hover{
+	color:rgb(0,200,150);
+	background-image: url('../img/wine-on-sm-orig.gif');
+	border:none !important;
+}
+
+.bookmarks[data-vendor-type="breweries"],.bookmarks[data-vendor-type="brewery"]{
+	background-image: url('../img/beer-off-sm.jpg');
+}
+.bookmarks[data-vendor-type="breweries"].active,.bookmarks[data-vendor-type="breweries"].active:focus:hover,.bookmarks[data-vendor-type="brewery"].active,.bookmarks[data-vendor-type="brewery"].active:focus:hover{
+	background-image: url('../img/beer-on-sm.jpg');
+}
+
+
+.bookmarks[data-vendor-type="arts_and_crafts"],.bookmarks[data-vendor-type="art_and_craft"]{
+	background-image: url('../img/art-off-sm.jpg');
+}
+.bookmarks[data-vendor-type="arts_and_crafts"].active,.bookmarks[data-vendor-type="arts_and_crafts"].active:focus:hover,.bookmarks[data-vendor-type="art_and_craft"].active,.bookmarks[data-vendor-type="art_and_craft"].active:focus:hover{
+	background-image: url('../img/art-on-sm.jpg');
+}
+
+.bookmarks[data-vendor-type="food"],.bookmarks[data-vendor-type="food"]{
+	background-image: url('../img/restaurant-off-sm.jpg');
+}
+.bookmarks[data-vendor-type="foods"].active,.bookmarks[data-vendor-type="foods"].active:focus:hover,.bookmarks[data-vendor-type="food"].active,.bookmarks[data-vendor-type="food"].active:focus:hover{
+	background-image: url('../img/restaurant-on-sm.jpg');
+}
+
+.bookmarks[data-vendor-type="ciders"],.bookmarks[data-vendor-type="cider"]{
+	background-image: url('../img/cider-off-sm.jpg');
+}
+.bookmarks[data-vendor-type="ciders"].active,.bookmarks[data-vendor-type="ciders"].active:focus:hover,.bookmarks[data-vendor-type="cider"].active,.bookmarks[data-vendor-type="cider"].active:focus:hover{
+	background-image: url('../img/cider-on-sm.jpg');
+}
+.bookmarks[data-vendor-type="spirits"],.bookmarks[data-vendor-type="spirit"]{
+	background-image: url('../img/distillery-off-sm.jpg');
+}
+.bookmarks[data-vendor-type="spirits"].active,.bookmarks[data-vendor-type="spirits"].active:focus:hover,.bookmarks[data-vendor-type="spirit"].active,.bookmarks[data-vendor-type="spirit"].active:focus:hover{
+	background-image: url('../img/distillery-on-sm.jpg');
+}
+
+
+.update-status-bar{float: left;
+	width:100%;
+	position: absolute;
+	background: rgba(0,200,150,0.9);
+	color:rgb(255,255,255);
+	padding: 10px;
+	text-align: center;
+	top:-100px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	z-index: 100;
+}
+.update-status-bar.active{
+	top:0;
+}
+
+.notes-button{
+	float: left;
+	width: 15px;
+	height: 15px;
+	padding: 1px;
+	text-align: center;
+	font-weight: bold;
+	background: rgba(0,200,150,0.9);
+	border-radius: 50%;
+	color:rgb(255,255,255);
+}
+.winery-notes{
+	float: left;
+	width: 100%;
+}
+/*
+.corks{
+	float: left;
+	display: block;
+	background-image: url('../img/cork-15x18.png');
+	background-repeat: no-repeat;
+	background-position: -8px 0px;
+	width: 7px;
+	height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 10;
+	margin-right: 3px;
+
+}
+*/
+
+.corks{
+float: left;
+display: block;
+background-image: url('../img/star-26x13.png');
+background-repeat: no-repeat;
+background-position: -13px 0px;
+width: 13px;
+height: 15px;
+overflow: hidden;
+cursor: pointer;
+z-index: 10;
+margin-right: 3px
+}
+
+.corks.active{
+	background-position: 0px 0px;
+}
+
+
+.list-link:active,.list-link:focus,.list-link:visited,.list-link:hover,.list-link:selected{
+	background: none !important;
+}
