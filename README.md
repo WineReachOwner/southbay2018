@@ -1,2 +1,2 @@
-# bestcoast2018
-Best Coast Beer Festival 2018 - San Diego, CA March 10, 2018
+# southcoast2018-app
+South Coast Beer and Wine Festival 2018 - Palos Verdes Estates, CA May 20, 2018
