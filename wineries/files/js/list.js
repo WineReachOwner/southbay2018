@@ -17,12 +17,12 @@ function setVendorActive(data,e){
 
 	if(window.localStorage.getItem('vendor_details')==null){
 		var vendor_details={}
-		vendor_details[$(data).attr('data-id')]=$(data).attr('data-json')	
+		vendor_details[$(data).attr('data-id')]=$(data).attr('data-json')
 	}else{
 		var vendor_details=JSON.parse(window.localStorage.getItem('vendor_details'));
 		vendor_details[$(data).attr('data-id')]=$(data).attr('data-json')
 	}
-	
+
 	window.localStorage.setItem('vendor_details',JSON.stringify(vendor_details))
 
 	setTimeout(function(){
@@ -37,7 +37,7 @@ function setVendorActive(data,e){
 | append the data as html element
 |-----------------------------------------------------*/
 
-function appendToList(data){ 
+function appendToList(data){
 	var htm=''
 
 	//get bookmarks
@@ -54,7 +54,7 @@ function appendToList(data){
         /*----------------------------------------------------
 		| Read bookmarks from localstorage bookmarks
 		| and set activeClass=active if wineryID is on the list
-		|-----------------------------------------------------*/     
+		|-----------------------------------------------------*/
 		var activeClass='';
 		counter ++;
 		try{
@@ -90,44 +90,44 @@ function appendToList(data){
 	<div id='stacks_in_6_page1' class='stacks_in com_joeworkman_stacks_foundation_1col_s3_stack'>
 
 		<div class='row'>
-			<div class='columns small-12   '> 
+			<div class='columns small-12   '>
 				<div id='stacks_out_82_page1' class='stacks_out'>
 					<div id='stacks_in_82_page1' class='stacks_in com_joeworkman_stacks_link_stack'>
 
-					
+
 							<div id='stacks_out_21_page1' class='stacks_out'>
 
 								<div id='stacks_in_21_page1' class='stacks_in com_joeworkman_stacks_foundation_2col_s3_stack'>
 
 									<div class='row'>
 										<div class='columns small-9  '>
-											<a href="../details/details.html" data-id="`+data[i].id+`" data-json='`+JSON.stringify(data[i])+`' class="list-link" rel="" onclick="setVendorActive(this,event);"> 
-  
+											<a href="../details/details.html" data-id="`+data[i].id+`" data-json='`+JSON.stringify(data[i])+`' class="list-link" rel="" onclick="setVendorActive(this,event);">
+
 												<div id='stacks_out_24_page1' class='stacks_out'>
 													<div id='stacks_in_24_page1' class='stacks_in com_joeworkman_stacks_foundation_header_stack'>
 														<h3 class="text-left     " >`+data[i].business_name+`</h3>
 
 													</div>
-												</div> 
+												</div>
 											</a>
 										</div>
-										<div class='columns small-3  '>  
+										<div class='columns small-3  '>
 											<div id='stacks_out_26_page1' class='stacks_out'>
 												<div id='stacks_in_26_page1' class='stacks_in com_joeworkman_stacks_foundation_image_stack'>
 
-													<div class="text-center  ">    
+													<div class="text-center  ">
 														<span class="bookmarks `+activeClass+`" data-vendor-type="`+data[i].category.toLowerCase()+`" onclick="event.preventDefault();bookmark(`+data[i].id+`,this);"></span>
-												
+
 													</div>
 
 												</div>
-											</div> 
+											</div>
 										</div>
 									</div>
 
 								</div>
-							</div> 
-						
+							</div>
+
 
 					</div>
 				</div>
@@ -223,10 +223,10 @@ function readListFromServer(callback_pre_success=function(json,count=0,data=[]){
 
 	$.ajax({
          type: "GET",
-		url:"https://hdl2fzrybi.execute-api.us-west-1.amazonaws.com/bestcoast/vendors/?category="+category+"&page="+parseInt(page),
+		url:"https://hwjqi3t3vd.execute-api.us-west-1.amazonaws.com/southbay/vendors/?category="+category+"&page="+parseInt(page),
          beforeSend: function(){ },
          success: function(json){
-            
+
             //aws returns object
             if(typeof json=='object'){
             	var data=json;
@@ -238,7 +238,7 @@ function readListFromServer(callback_pre_success=function(json,count=0,data=[]){
            		 var data=$.parseJSON(json)
             }
 
-            
+
             var length=0;
 
             try{length=data.result.length;}catch(e){}
@@ -258,11 +258,11 @@ function readListFromServer(callback_pre_success=function(json,count=0,data=[]){
 	            callback_success(data.result);
 	        }
 
-            
 
 
 
-           
+
+
         },error:function(){}
      });
 }
@@ -274,7 +274,3 @@ function showMoreList(e,element){
 		$(element).remove();
 	});
 }
-
-
-
-

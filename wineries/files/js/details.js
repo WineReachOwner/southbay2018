@@ -232,7 +232,7 @@ function showVendorDetails(data){
 
 									<!--bookmark icon-->
 									<span class="bookmarks `+activeClass+`" onclick="bookmark('`+data.id+`',this);"  data-vendor-type="`+data.category.toLowerCase()+`" ></span>
- 
+
 									<div class="text-center  ">
 											<img class="" oncontextmenu="return false;" draggable="false"  src="`+data.logo+`" width="85%"  data-interchange='[details_files/small_231.png,(default)]' alt="My Image" onerror="this.remove()"/>
 									</div>
@@ -340,7 +340,7 @@ function readProductsFromServer(callback_pre_success=function(json,count=0,data=
 //ttps://3otzf2vj3l.execute-api.us-west-1.amazonaws.com/putnam/vendors/preview/
 	$.ajax({
 	     type: "GET",
-	     url:"https://hdl2fzrybi.execute-api.us-west-1.amazonaws.com/bestcoast/vendors/preview/?vendor_id="+window.localStorage.getItem('id')+"&products=true&page="+parseInt(page),
+	     url:"https://hwjqi3t3vd.execute-api.us-west-1.amazonaws.com/southbay/vendors/preview/?vendor_id="+window.localStorage.getItem('id')+"&products=true&page="+parseInt(page),
 	     beforeSend: function(){ },
 	     success: function(json){
 

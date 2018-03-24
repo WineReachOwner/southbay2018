@@ -8,7 +8,7 @@ window.settings.event={}
 | append the data as html element
 |-----------------------------------------------------*/
 
-function appendToEventList(data){ 
+function appendToEventList(data){
 	var htm=''
 
 	//get bookmarks
@@ -25,7 +25,7 @@ function appendToEventList(data){
         /*----------------------------------------------------
 		| Read bookmarks from localstorage bookmarks
 		| and set activeClass=active if wineryID is on the list
-		|-----------------------------------------------------*/     
+		|-----------------------------------------------------*/
 		var activeClass='';
 		counter ++;
 		try{
@@ -42,12 +42,12 @@ function appendToEventList(data){
 	<div id='stacks_in_3831_page4' class='stacks_in com_joeworkman_stacks_foundation_1col_s3_stack'>
 
 		<div class='row'>
-			<div class='columns small-12   '> 
+			<div class='columns small-12   '>
 				<div id='stacks_out_3838_page4' class='stacks_out'>
 					<div id='stacks_in_3838_page4' class='stacks_in com_joeworkman_stacks_foundation_panel_s3_stack'>
 
-						<div   class="panel panel "> 
-							
+						<div   class="panel panel ">
+
 							<div id='stacks_out_3834_page4' class='stacks_out'>
 								<div id='stacks_in_3834_page4' class='stacks_in com_joeworkman_stacks_foundation_header_stack'>
 
@@ -106,7 +106,7 @@ function appendToEventList(data){
 							<div id='stacks_out_3852_page4' class='stacks_out'>
 								<div id='stacks_in_3852_page4' class='stacks_in com_joeworkman_stacks_foundation_paragraph_s3_stack'>
 
- 									<p class="text-justify    " draggable="false">`+data[i].about+`</p> 
+ 									<p class="text-justify    " draggable="false">`+data[i].about+`</p>
 
 								</div>
 							</div>
@@ -114,7 +114,7 @@ function appendToEventList(data){
 
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 
@@ -195,10 +195,10 @@ function readEventsFromServer(callback_pre_success=function(json,count=0,data=[]
 	var storage=window.sessionStorage.getItem('event-storage')==null?'events':window.sessionStorage.getItem('event-storage')
 	$.ajax({
          type: "GET",
-         url:"https://hdl2fzrybi.execute-api.us-west-1.amazonaws.com/bestcoast/events/?category="+category+"&page="+parseInt(page),
+         url:"https://hwjqi3t3vd.execute-api.us-west-1.amazonaws.com/southbay/events/?category="+category+"&page="+parseInt(page),
          beforeSend: function(){ },
          success: function(json){
-            
+
             //aws returns object
             if(typeof json=='object'){
             	var data=json;
@@ -210,7 +210,7 @@ function readEventsFromServer(callback_pre_success=function(json,count=0,data=[]
            		 var data=$.parseJSON(json)
             }
 
-            
+
             var length=0;
 
             try{length=data.result.length;}catch(e){}
@@ -230,11 +230,11 @@ function readEventsFromServer(callback_pre_success=function(json,count=0,data=[]
 	            callback_success(data.result);
 	        }
 
-            
 
 
 
-           
+
+
         },error:function(){}
      });
 }
@@ -246,7 +246,3 @@ function showMoreEvents(e,element){
 		$(element).remove();
 	});
 }
-
-
-
-
