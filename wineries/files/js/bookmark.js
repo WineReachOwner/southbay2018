@@ -144,7 +144,7 @@ function saveBookmarksToRemoteServer(winery,callback,error_callback){
 
 
 function clearBookmarksToRemoteServer(winery,id,callback,error_callback){
-	$.post('https://hzkd2pj18a.execute-api.us-west-1.amazonaws.com/southbay/vendors/unmark/',{id:id,uuid:device.uuid},function(json){
+	$.post('https://hwjqi3t3vd.execute-api.us-west-1.amazonaws.com/southbay/vendors/unmark/',{id:id,uuid:device.uuid},function(json){
 		try{
 
 
